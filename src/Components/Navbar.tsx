@@ -28,17 +28,17 @@ const Navbar = () => {
   return (
     <nav className="bg-[#152C24] py-4">
     
-      <div className="flex items-center  justify-between space-x-20 px-2">
+      <div className="flex items-center ml-7 space-x-6 justify-between">
         {/* Logo */}
         <div>
-          <img src={logo} alt="Logo" className="h-[42px] w-[160px]" />
+          <img src={logo} alt="Logo" className="h-[42px] w-[160px] ml-[10px] " />
         </div>
 
         {/* Menu items */}
-        <div className="hidden md:flex  space-x-2 font-Inter items-center justify-center text-center font-semibold">
+        <div className="hidden md:flex mr-6 space-x-2 font-Inter items-center justify-center text-center font-semibold">
           <a
             href="/"
-            className={`p-2 text-[18px] h-[40px] w-[157px] rounded-md ${
+            className={`p-0 text-[24px] h-[44px] w-[157px] rounded-md ${
               selectedMenu === "Home"
                 ? "bg-[#155528] mix-blend-luminosity text-white"
                 : "bg-[#155528] mix-blend-luminosity text-white"
@@ -49,7 +49,7 @@ const Navbar = () => {
           </a>
           <a
             href="/services"
-            className={`p-2 text-[18px] h-[40px] w-[157px] rounded-md ${
+            className={`p-0 text-[24px] h-[40px] w-[157px] rounded-md ${
               selectedMenu === "Services"
                 ? "bg-[#155528] mix-blend-luminosity text-white"
                 : "bg-[#155528] mix-blend-luminosity text-white"
@@ -60,7 +60,7 @@ const Navbar = () => {
           </a>
           <a
             href="/reports"
-            className={`p-2 text-[18px] h-[40px] w-[157px] rounded-md ${
+            className={`p-0 text-[24px] h-[40px] w-[157px] rounded-md ${
               selectedMenu === "Reports"
                 ? "bg-[#155528] mix-blend-luminosity text-white"
                 : "bg-[#155528] mix-blend-luminosity text-white"
@@ -71,7 +71,7 @@ const Navbar = () => {
           </a>
           <a
             href="/communities"
-            className={`p-2 text-[18px] h-[40px] w-[157px] rounded-md ${
+            className={`p-0 text-[24px] h-[40px] w-[157px] rounded-md ${
               selectedMenu === "Communities"
                 ? "bg-[#155528] mix-blend-luminosity text-white"
                 : "bg-[#155528] mix-blend-luminosity text-white"
@@ -82,7 +82,7 @@ const Navbar = () => {
           </a>
           <a
             href="/resources"
-            className={`p-2 text-[18px] h-[40px] w-[157px] rounded-md ${
+            className={`p-0 text-[24px] h-[40px] w-[157px] rounded-md ${
               selectedMenu === "Resources"
                 ? "bg-[#155528] mix-blend-luminosity text-white"
                 : "bg-[#155528] mix-blend-luminosity text-white"
@@ -93,7 +93,7 @@ const Navbar = () => {
           </a>
           <a
             href="/gallery"
-            className={`p-2 text-[18px] h-[40px] w-[157px] rounded-md ${
+            className={`p-0 text-[24px] h-[40px] w-[157px] rounded-md ${
               selectedMenu === "Gallery"
                 ? "bg-[#155528] mix-blend-luminosity text-white"
                 : "bg-[#155528] mix-blend-luminosity text-white"
@@ -107,8 +107,9 @@ const Navbar = () => {
           <a href="/countries-page">
             <div>
               <button className=" text-white flex items-center">
-                <img src={flag} alt="Flag" className="h-[36px] w-[50px] ml-4" />
-                <IoMdArrowDropdown className="" size={20} />
+                <img src={flag} alt="Flag" className="h-[62px] w-[62px] ml-4" />
+                <IoMdArrowDropdown className="h-[40px] w-[40px]" />
+
               </button>
             </div>
           </a>
