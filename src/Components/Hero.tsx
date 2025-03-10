@@ -42,126 +42,167 @@ const Hero = () => {
     <div className="bg-[#152C24] min-h-screen w-full">
 
 
-      {/* Header Section */}
-      <div className="px-4 flex justify-between items-center">
-        <h1 className="text-2xl ml-20  md:text-[48px] text-[#FDBD26] font-bold md:mt-2">
-          AgriTech
-        </h1>
-        <img
-          src={logo2}
-          className="w-[71px] sm:w-[60px] md:w-[71px] lg:w-[70px] xl:w-[80px] h-auto text-[#919291] absolute sm:right-[20%] md:right-[10%]"
-          alt="Logo"
-        />
-      </div>
+    <div className="px-4 flex justify-between items-center relative">
+  {/* Title - Hidden on Small Screens */}
+  <h1 className="hidden sm:block text-3xl md:text-[48px] text-[#FDBD26] font-bold md:mt-2 ml-4 md:ml-22">
+    AgriTech
+  </h1>
 
-      {/* Slider Section */}
-      <div className="relative font-Inter">
-        <Slider ref={sliderRef} {...settings} className="px-2">
-          {slides.map((slide, index) => (
-            <div key={index} className="relative flex flex-col items-center">
-              {/* Text Content */}
-              <div className="text-center md:text-left px-4 ml-18  ">
-                <h2 className="text-white font-bold text-xl sm:text-2xl md:text-4xl lg:text-5xl leading-[120%]">
-                  Revolutionizing Agriculture with Digital <br className="hidden sm:block" /> Solutions
-                </h2>
-                <h2 className="text-lg sm:text-xl md:text-[32px] text-white leading-[120%]">
-                  Stay informed with insights and innovations in Agriculture
-                </h2>
-              </div>
+  {/* Logo - Moves to Right on Small Screens */}
+  <img
+    src={logo2}
+    className=" hidden sm:block  w-[50px] sm:w-[60px] md:w-[71px] lg:w-[70px] xl:w-[80px] h-auto   text-[#919291] ml-auto sm:mr-6 md:mr-10"
+    alt="Logo"
+  />
+</div>
 
-              {/* Image */}
-              <div className="relative" >
-      <img
-        src={slide.image}
-        className="w-[1157px] ml-22 h-[622px] mb-4 sm:h-[400px] mt-2 md:w-[1157] md:h-[622px]  rounded-md"
-      />
-      <div
-        className="absolute  top-0 bg-[#152C24] p-6"
-        style={{
-          width: "353px",
-          height: "76px",
-        
-          borderBottomRightRadius: "50px",
-        }}
-      >
-       {/* <button className="absolute top-[10px] left-[3px] text-start p-2 w-[250px] h-[50px] text-lg font-semibold text-gray-700 bg-[#D2F34A] mb-8 border rounded-md ">
-    See More
-  </button> */}
-   <button className=" absolute top-[10px] left-[63px] ml-6 flex items-center justify-between p-2 w-[229px] h-[49px] text-lg font-semibold text-gray-700 bg-[#D2F34A] border rounded-md">
-    See More
-    <img src={right} alt="Arrow" className="w-[8.5px] h-[17px] ml-2" />
-  </button>
-      </div>
 
-                {/* Navigation Arrows */}
-                <div
-  className="absolute bottom-0 right-0 bg-[#152C24] p-6 flex items-center gap-12 "
-  style={{
-    width: "293px",
-    height: "76px",
-    borderTopLeftRadius: "50px",
-  }}>
-                <button
-  className="w-15 h-15 flex items-center justify-center text-white bg-[#D2F34A] rounded-full mt-4"
-  onClick={() => {
-    if (sliderRef.current) {
-      sliderRef.current.slickPrev();
-    }
-  }}
->
-  <img src={left} className="w-[8.5px] h-[17px]" alt="Previous" />
-</button><button
-  className="w-15 h-15 flex items-center justify-center text-white bg-[#054413] rounded-full mt-4"
-  onClick={() => {
-    if (sliderRef.current) {
-      sliderRef.current.slickNext();
-    }
-  }}
->
-  <img src={right1} className="w-[8.5px] h-[17px]" alt="Next" />
-</button>
-                </div>
-              </div>
+
+<div className="relative font-Inter">
+  <Slider ref={sliderRef} {...settings} className="px-2">
+    {slides.map((slide, index) => (
+      <div key={index} className="relative flex flex-col items-center">
+        {/* ✅ Large Screens (Desktop) */}
+        <div className="hidden sm:block">
+          {/* Text Content */}
+          <div className="text-start md:text-left px-4 md:ml-10 lg:ml-20">
+            
+            <h2 className="text-white font-bold text-lg sm:text-sm md:text-4xl lg:text-5xl flex items-center gap-2">
+              Revolutionizing Agriculture with Digital
+              <br className="hidden sm:block" /> Solutions
+            </h2>
+
+            <h2 className="text-sm sm:text-lg md:text-2xl lg:text-3xl text-white mt-2 leading-snug">
+              Stay informed with insights and innovations in Agriculture
+            </h2>
+          </div>
+
+          {/* Image + Controls */}
+          <div className="relative">
+            <img
+              src={slide.image}
+              className="w-[1157px] ml-22 h-[622px] mb-4 sm:h-[400px] mt-2 md:w-[1157px] md:h-[622px] rounded-md"
+            />
+
+            {/* "See More" Button */}
+            <div className="absolute top-0 bg-[#152C24] p-6 w-[353px] h-[76px] rounded-br-[50px]">
+              <button className="absolute top-[10px] left-[63px] ml-6 flex items-center justify-between p-2 w-[229px] h-[49px] text-lg font-semibold text-gray-700 bg-[#D2F34A] border rounded-md">
+                See More
+                <img src={right} alt="Arrow" className="w-[8.5px] h-[17px] ml-2" />
+              </button>
             </div>
-          ))}
-        </Slider>
-      </div>
 
-      {/* Partner Logos Section */}
-      <div className="mb-6 mt-8 px-4 md:px-7">
-        <p className="text-[20px] ml-16 text-white sm:text-[24px] md:text-[32px] font-inter leading-[120%]">
-          Partners supporting farmers
-        </p>
-      </div>
-      {/* <div className="max-w-screen-xl ml-20 mx-auto mt-4 mb-6">
-        <div className="grid grid-cols-2 md:grid-cols-6 lg:grid-cols-5 gap-20">
-          <div className="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
-            <img src={logocloud1} alt="" className="h-[69px] w-[205.03px] object-contain" />
-          </div>
-          <div className="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
-            <img src={logocloud2} alt="" className="h-[80px] w-[80px]" />
-          </div>
-          <div className="flex items-center justify-center  col-span-1 md:col-span-2 lg:col-span-1">
-            <img src={logocloud3} alt="" className="h-[79px] w-[207px]" />
-          </div>
-          <div className="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
-            <img src={logocloud4} alt="" className="h-[70px] w-[212px]" />
+            {/* Navigation Buttons */}
+            <div
+              className="absolute bottom-0 right-0 bg-[#152C24] p-6 flex items-center gap-12 w-[293px] h-[76px] rounded-tl-[50px]"
+            >
+              <button
+                className="w-12 h-12 flex items-center justify-center bg-[#D2F34A] rounded-full"
+                onClick={() => sliderRef.current?.slickPrev()}
+              >
+                <img src={left} className="w-[8.5px] h-[17px]" alt="Previous" />
+              </button>
+              <button
+                className="w-12 h-12 flex items-center justify-center bg-[#054413] rounded-full"
+                onClick={() => sliderRef.current?.slickNext()}
+              >
+                <img src={right1} className="w-[8.5px] h-[17px]" alt="Next" />
+              </button>
+            </div>
           </div>
         </div>
-      </div> */}
-  <div className="max-w-screen-xl mx-auto mt-4 mb-6">
-  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-10 justify-items-center">
+
+        {/* ✅ Small Screens (Mobile) */}
+        <div className="block sm:hidden w-full">
+          {/* Image */}
+        
+
+          {/* Mobile Text Content */}
+
+          <div className="text-center px-4 mt-4">
+  {/* Flex container for text and logo */}
+  <div className="flex items-center w-full">
+    {/* Text Section */}
+    <div className="text-left flex-1">
+      <h2 className="text-white font-bold text-sm whitespace-nowrap">
+        Revolutionizing Agriculture with
+      </h2>
+      <h2 className="text-white font-bold text-sm sm:text-lg">
+        Digital Solutions
+      </h2>
+    </div>
+
+    {/* Logo Fully Right */}
+    <img
+      src={logo2}
+      className="w-[60px] h-[50px] text-[#919291] ml-auto top-0"
+      alt="Logo"
+    />
+  </div>
+
+  {/* Additional Text Section */}
+  <h2 className="text-xs text-start  text-white mt-2">
+    Stay informed with insights and innovations in Agriculture
+  </h2>
+</div>
+          <div className="relative ml-3">
+          <img src={slide.image} className="w-[344px] h-[185px]  mx-auto rounded-md mt-4" alt="Slide" />
+
+            {/* "See More" Button */}
+            <div className="absolute top-0 bg-[#D9D9D9] w-[101px] h-[34px] rounded-br-[10px] flex items-center justify-center">
+  <button className="flex items-center justify-between px-2 py-1 w-[90px] h-[20px] text-[12px] font-semibold text-gray-700 bg-[#D2F34A] border rounded-md">
+    See More
+    <img src={right} alt="Arrow" className="w-[3px] h-[6px] ml-2" />
+  </button>
+</div>
+
+       
+           
+            <div className="absolute bottom-0 right-0 bg-[#152C24] p-2 flex items-center gap-2 rounded-tl-[10px] sm:gap-4">
+  <button
+    className="w-[20px] h-[20px] sm:w-[26px] sm:h-[26px] flex items-center justify-center bg-[#D2F34A] rounded-full"
+    onClick={() => sliderRef.current?.slickPrev()}
+  >
+    <img src={left} className="w-[8px] h-[16px] sm:w-[10px] sm:h-[20px]" alt="Previous" />
+  </button>
+  <button
+    className="w-[20px] h-[20px] sm:w-[26px] sm:h-[26px] flex items-center justify-center bg-[#054413] rounded-full"
+    onClick={() => sliderRef.current?.slickNext()}
+  >
+    <img src={right1} className="w-[8px] h-[16px] sm:w-[10px] sm:h-[20px]" alt="Next" />
+  </button>
+</div>
+            </div>
+       
+        </div>
+      </div>
+    ))}
+  </Slider>
+</div>
+
+
+   
+      <div className=" mt-2 px-4 md:px-7">
+  <p className="text-[20px] text-white sm:text-[24px] md:text-[32px] sm:text-start font-inter leading-[120%] ml-0 sm:ml-16">
+    <span className="block sm:hidden">Partners</span> 
+    <span className="hidden sm:block">Partners supporting farmers</span> 
+  </p>
+</div>
+
+    
+  <div className="max-w-screen-xl mx-auto ml-2 mt-2 ">
+  <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 gap-10 justify-items-center">
     <div className="flex items-center sm:ml-20">
       <img src={logocloud1} alt="" className="h-20 w-52 object-contain" />
     </div>
     <div className="flex items-center">
-      <img src={logocloud2} alt="" className="h-20 w-20 object-contain" />
+      <img src={logocloud2} alt="" className="h-20 w-52 object-contain" />
     </div>
     <div className="flex items-center">
-      <img src={logocloud3} alt="" className="h-20 w-52 object-contain" />
+      <img src={logocloud3} alt="" className="h-20 w-52  object-contain" />
     </div>
     <div className="flex items-center">
-      <img src={logocloud4} alt="" className="h-20 w-52 object-contain" />
+      <img src={logocloud4} alt="" className="h-20 w-52   object-contain" />
     </div>
   </div>
 </div>
