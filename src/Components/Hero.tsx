@@ -39,16 +39,15 @@ const Hero = () => {
 
   return (
     <>
-    <div className="bg-[#152C24] min-h-screen w-full">
+    <div className="bg-[#152C24] min-h-screen w-full lg:bg-[#152C24]">
 
 
     <div className="px-4 flex justify-between items-center relative">
-  {/* Title - Hidden on Small Screens */}
+
   <h1 className="hidden sm:block text-3xl md:text-[48px] text-[#FDBD26] font-bold md:mt-2 ml-4 md:ml-22">
     AgriTech
   </h1>
 
-  {/* Logo - Moves to Right on Small Screens */}
   <img
     src={logo2}
     className=" hidden sm:block  w-[50px] sm:w-[60px] md:w-[71px] lg:w-[70px] xl:w-[80px] h-auto   text-[#919291] ml-auto sm:mr-6 md:mr-10"
@@ -62,9 +61,9 @@ const Hero = () => {
   <Slider ref={sliderRef} {...settings} className="px-2">
     {slides.map((slide, index) => (
       <div key={index} className="relative flex flex-col items-center">
-        {/* ✅ Large Screens (Desktop) */}
+      
         <div className="hidden sm:block">
-          {/* Text Content */}
+        
           <div className="text-start md:text-left px-4 md:ml-10 lg:ml-20">
             
             <h2 className="text-white font-bold text-lg sm:text-sm md:text-4xl lg:text-5xl flex items-center gap-2">
@@ -86,9 +85,10 @@ const Hero = () => {
 
             {/* "See More" Button */}
             <div className="absolute top-0 bg-[#152C24] p-6 w-[353px] h-[76px] rounded-br-[50px]">
-              <button className="absolute top-[10px] left-[63px] ml-6 flex items-center justify-between p-2 w-[229px] h-[49px] text-lg font-semibold text-gray-700 bg-[#D2F34A] border rounded-md">
+              <button onClick={() => window.location.href = '/agritechmainpage'}  className="absolute top-[10px] left-[63px] ml-6 flex items-center justify-between  w-[229px] h-[49px] text-lg font-semibold text-gray-700 bg-[#D2F34A] border rounded-md m-2 p-4">
                 See More
-                <img src={right} alt="Arrow" className="w-[8.5px] h-[17px] ml-2" />
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-chevron-right w-[20px] h-[17px] ml-2"><path d="m9 18 6-6-6-6"/></svg>
               </button>
             </div>
 
@@ -158,7 +158,7 @@ const Hero = () => {
 
        
            
-            <div className="absolute bottom-0 right-0 bg-[#152C24] p-2 flex items-center gap-2 rounded-tl-[10px] sm:gap-4">
+            <div className="absolute bottom-0 right-0 bg-[#152C24] p-10 flex items-center gap-2 rounded-tl-[10px] sm:gap-4">
   <button
     className="w-[20px] h-[20px] sm:w-[26px] sm:h-[26px] flex items-center justify-center bg-[#D2F34A] rounded-full"
     onClick={() => sliderRef.current?.slickPrev()}
@@ -189,9 +189,11 @@ const Hero = () => {
   </p>
 </div>
 
+
+<br />
     
-  <div className="max-w-screen-xl mx-auto ml-2 mt-2 ">
-  <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 gap-10 justify-items-center">
+  <div className="max-w-screen-xl mx-auto ml-2 mt-10 ">
+  <div className="grid grid-cols-10 sm:grid-cols-4 md:grid-cols-4 gap-12 justify-items-center">
     <div className="flex items-center sm:ml-20">
       <img src={logocloud1} alt="" className="h-20 w-52 object-contain" />
     </div>
@@ -214,3 +216,22 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
+
+
+
+// const Hero = () => {
+//   return (
+//     <header>
+//       <div className="bg-[#152C24] ">
+//       <h1 className="text-[#FDBD26]">AgriTech</h1>
+//       <h2 className="text-white">Revolutionizing Agriculture with Digital solutions</h2>
+//       <p>Stay informed with insights and innovations in Agriculture</p>
+//       <button>See More</button>
+//       </div>
+//     </header>
+//   )
+// }
+
+// export default Hero

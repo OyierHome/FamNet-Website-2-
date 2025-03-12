@@ -3,14 +3,16 @@ import './App.css'
 import appRouter from './routes'
 
 
+
 function App() {
 
   return (
-    <div className='bg-[#152C24]'>
+    <>
+    <div className=''>
 
     <RouterProvider router={appRouter} />
-   
-    </div>
+
+    </div></>
   )
 }
 

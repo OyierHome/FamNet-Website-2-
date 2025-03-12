@@ -8,6 +8,7 @@ import Reports from "./pages/Reports";
 import Communities from "./pages/Communities";
 import Resources from "./pages/Resources";
 import Gallery from "./pages/Gallery";
+import AgritechMainPage from "./pages/AgritechMainPage";
 
 
 const appRouter = createBrowserRouter(
@@ -23,6 +24,7 @@ const appRouter = createBrowserRouter(
       <Route path="/communities" element={<Communities />} />
       <Route path="/resources" element={<Resources />} />
       <Route path="/gallery" element={<Gallery/>} />
+      <Route path="/agritechmainpage" element={<AgritechMainPage/>} />
      
 
     </Route>
