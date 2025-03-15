@@ -1,4 +1,4 @@
-import Gallery1 from "../../assets/gallery1.png";
+import Gallery1 from "../assets/gallery1.png";
 import { IoIosArrowDown } from "react-icons/io";
 
 const GalleryPage2 = () => {

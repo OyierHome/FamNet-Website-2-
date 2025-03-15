@@ -1,5 +1,5 @@
-import voicepage1 from "../Assets/voicepage1.png";
-import logo from "../Assets/logo.png";
+import voicepage1 from "../assets/voicepage1.png";
+import logo from "../assets/logo.png";
 import logo3 from "../assets/logo3.png"
 import right1 from "../assets/right1.png";
 import pin  from  "../assets/pin.png"

@@ -1,7 +1,7 @@
 import { CiSearch } from "react-icons/ci";
-import calender from "../../assets/calender.png";
+import calender from "../assets/calender.png";
 import { IoIosArrowDown } from "react-icons/io";
-import Gallery1 from "../../assets/gallery1.png";
+import Gallery1 from "../assets/gallery1.png";
 const GalleryPage1 = () => {
    const blogPosts = [
       {

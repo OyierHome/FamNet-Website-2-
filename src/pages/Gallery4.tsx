@@ -1,4 +1,4 @@
-import gallery1 from "../../assets/gallery1.png"
+import gallery1 from "../assets/gallery1.png"
 
 
 const Gallery4 = () => {

@@ -1,5 +1,5 @@
-import innovation6 from "../../assets/innovation6.png"
-import logo from "../../assets/logo.png";
+import innovation6 from "../assets/innovation6.png"
+import logo from "../assets/logo.png";
 
 const InsightPage6 = () => {
   return (

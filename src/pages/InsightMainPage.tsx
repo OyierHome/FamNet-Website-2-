@@ -1,10 +1,10 @@
-import down from "../../assets/down.png";
-import insight1 from "../../assets/insight1.png";
-import insight2 from "../../assets/insight2.png";
-import insight3 from "../../assets/insight3.png";
-import insight4 from "../../assets/insight4.png";
-import insight5 from "../../assets/insight5.png";
-import insight6 from "../../assets/insight6.png";
+import down from "../assets/down.png";
+import insight1 from "../assets/insight1.png";
+import insight2 from "../assets/insight2.png";
+import insight3 from "../assets/insight3.png";
+import insight4 from "../assets/insight4.png";
+import insight5 from "../assets/insight5.png";
+import insight6 from "../assets/insight6.png";
 
 
 
