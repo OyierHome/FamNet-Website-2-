@@ -4,16 +4,24 @@ import appRouter from './routes'
 
 
 
+
+
+
+
+
+
+
+
 function App() {
 
   return (
     <>
     <div className=''>
-
-    <RouterProvider router={appRouter} />
+   
+    <RouterProvider router={appRouter} /> 
 
     </div></>
   )
 }
-
 export default App
+

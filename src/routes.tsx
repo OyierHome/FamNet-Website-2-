@@ -7,10 +7,11 @@ import Services from "./pages/Services";
 import Reports from "./pages/Reports";
 import Communities from "./pages/Communities";
 import Resources from "./pages/Resources";
-import Gallery from "./pages/Gallery";
+import Gallery from "./pages/Galleryone";
 import AgritechMainPage from "./pages/AgritechMainPage";
-
-
+import AgritechPageone from "./pages/AgritechPageone";
+import VoiceMainPage from "./pages/VoiceMainPage";
+import VoicePageone from "./pages/VoicePageone";
 const appRouter = createBrowserRouter(
   createRoutesFromElements(
     <Route
@@ -25,8 +26,9 @@ const appRouter = createBrowserRouter(
       <Route path="/resources" element={<Resources />} />
       <Route path="/gallery" element={<Gallery/>} />
       <Route path="/agritechmainpage" element={<AgritechMainPage/>} />
-     
-
+      <Route path="/agritechmainpageone" element={<AgritechPageone/>} />
+      <Route path="/voicemainpage" element={<VoiceMainPage/>} />
+      <Route path="/voicepageone" element={<VoicePageone/>} />
     </Route>
   )
 );

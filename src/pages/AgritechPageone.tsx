@@ -7,14 +7,14 @@ import right1 from "../assets/right1.png";
 const AgritechPage1 = () => {
   return (
     <>
-      <div className="font-inter mb-20 items-center justify-center bg-white px-4 md:px-8 lg:px-16">
+      <div className="font-inter mb-20 items-center justify-center bg-white px-2 md:px-8 lg:px-16">
         {/* Heading Section */}
         <div className="w-full relative overflow-hidden flex flex-col items-start justify-start text-left text-white font-inter mb-8">
-          <h2 className="text-[#FDBD26] mt-9 md:ml-18 lg:ml-18 text-[24px] md:text-[36px] lg:text-[47px] font-bold leading-[120%]">
+          <h2 className="text-[#FDBD26] ml-2 mt-9 md:ml-18 lg:ml-18 text-[20px] md:text-[36px] lg:text-[47px] font-bold leading-[120%]">
             AgriTech
           </h2>
 
-          <h2 className="text-black text-[24px] md:ml-18 lg:ml-18 md:text-[36px] font-bold leading-[150%] mt-2 md:mt-4">
+          <h2 className="text-black text-[20px] ml-2 md:ml-18 lg:ml-18 md:text-[36px] font-bold leading-[150%] mt-2 md:mt-4">
             Revolutionizing Agriculture with Digital Solutions
           </h2>
         </div>
@@ -24,7 +24,7 @@ const AgritechPage1 = () => {
           <div className="relative md:ml-18 lg:ml-18 w-full max-w-[1157px]">
             <img
               src={agritech1}
-              className="w-full h-auto sm:h-[400px] md:w-[1157px] md:h-[622px] rounded-md"
+              className="w-[600px] h-auto sm:h-[400px] md:w-[1157px] md:h-[622px] rounded-md"
               alt="Agritech"
             />
 
@@ -58,7 +58,7 @@ const AgritechPage1 = () => {
 
           <div className="font-inter font-normal 10 lg:ml-10 text-[18px] md:text-[38px] leading-[150%] tracking-[0%]">
             <p>
-            Revolutionizing agriculture with digital solutions refers to<br/> the use of advanced technologies, software, and data-<br/>driven tools to transform traditional farming practices into<br/> more efficient, productive, and sustainable systems. Digital <br/>solutions in agriculture integrate innovations like big data,<br/> artificial intelligence (AI), the Internet of Things (IoT),<br/> machine learning, and automation to modernize every <br/>aspect of farming, from crop production to livestock<br/> management.
+            Revolutionizing agriculture with digital solutions refers to  <br className="hidden md:block" /> the use of advanced technologies, software, and data-  <br className="hidden md:block" />driven tools to transform traditional farming practices into<br className="hidden md:block"/> more efficient, productive, and sustainable systems. Digital <br/>solutions in agriculture integrate innovations like big data,<br className="hidden md:block"/> artificial intelligence (AI), the Internet of Things (IoT),<br className="hidden md:block"/> machine learning, and automation to modernize every <br/>aspect of farming, from crop production to livestock<br className="hidden md:block"/> management.
 
             </p>
             <p className="mt-12">
